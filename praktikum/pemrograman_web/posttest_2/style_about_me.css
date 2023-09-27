@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+
+/* Transition */
+
+a {
+    transition: all 500ms ease;
+}
+
+/* navigation bar */
+
+nav {
+    display: flex;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.navbar-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.navbar-name {
+    font-size: 2rem;
+}
+
+.navbar-name:hover {
+    cursor: default;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.profile-pic {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.profile-text {
+    align-self: center;
+    text-align: center;
+}
+
+.profile-text p {
+    font-weight: 500;
+}
+
+.profile-text-greeting {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.profile-text-name {
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+.profile-text-role {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+}
+
+/* About */
+
+#about {
+    padding: 100px 18.5%;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex-basis: 35%;
+}
+
+.about-image img {
+    border-radius: 15px;
+
+}
+
+.about-text {
+    flex-basis: 50%;
+
+}
+
+.about-text-title {
+    font-size: 40px;
+}
+
+.about-tab {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.about-tab-links {
+    margin-right: 50px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.about-tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: black;
+    position: absolute;   
+    left: 0;
+    bottom: -8px;
+    transition: 500ms;
+}
+
+.about-tab-links.active-link::after {
+    width: 100%;
+}
+
+.about-tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.about-tab-contents ul li span{
+    font-weight: bold;
+}
+
+.about-tab-contents {
+    display: none;
+}
+
+.about-tab-contents.active-tab {
+    display: block;
+}
