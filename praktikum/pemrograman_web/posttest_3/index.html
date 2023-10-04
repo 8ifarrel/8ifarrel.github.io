@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PENORAK - Pengaduan Online Rakyat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="image-container">
+    <div class="content">
+      <h1 class="main-title">Layanan Pengaduan Online Rakyat</h1>
+      <p class="description">Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</p>
+    </div>
+    <div class="form-background">
+      <div class="form-container">
+        <div class="form-title">
+          <h2>Sampaikan Laporan Anda</h2>
+        </div>
+        <form>
+          <label for="judul">Ketik judul laporan Anda:</label>
+          <input type="text" id="judul" name="judul" required>
+      
+          <label for="isi">Ketik isi laporan Anda:</label>
+          <textarea id="isi" name="isi" rows="10" required style="resize: none;"></textarea>
+      
+          <label for="tanggal">Pilih tanggal kejadian:</label>
+          <input type="date" id="tanggal" name="tanggal" required>
+      
+          <label for="lokasi">Ketik lokasi Anda:</label>
+          <input type="text" id="lokasi" name="lokasi" required>
+      
+          <label for="instansi">Ketik instansi tujuan:</label>
+          <input type="text" id="instansi" name="instansi" required>
+      
+          <input type="submit" value="Kirim Pengaduan" id="kirim-button" style="background-color: #ff0000; color: #fff;">
+        </form>
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <a href="index.html" class="logo">PENORAK</a>
+    <nav class="navbar">
+      <button id="dark-mode-toggle">Dark Mode</button>
+      <a href="about_me.html">TENTANG SAYA</a>
+      <a href="#footer">HUBUNGI KAMI</a>
+  </header>
+  <footer id="footer">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Hubungi Kami</h3>
+        <p>Email: <a href="mailto:contoh@email.com">contoh@email.com</a></p>
+        <p>Nomor Telepon: <a href="tel:+1234567890">+1234567890</a></p>
+      </div>
+      <div class="social-media">
+        <h3>Sosial Media</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/">Twitter</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const imageContainer = document.querySelector('.image-container');
+
+    function enableDarkMode() {
+      document.body.classList.add('dark-mode');
+      imageContainer.style.backgroundImage = 'none';
+      const inputs = document.querySelectorAll('input[type="text"], input[type="date"], textarea');
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].style.backgroundColor = '#000';
+        inputs[i].style.color = '#fff';
+        inputs[i].style.borderColor = '#ff0000';
+      }
+    }
+
+    function disableDarkMode() {
+      document.body.classList.remove('dark-mode');
+      imageContainer.style.backgroundImage = 'url("background.jpg")';
+      const inputs = document.querySelectorAll('input[type="text"], input[type="date"], textarea');
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].style.backgroundColor = '#fff';
+        inputs[i].style.color = '#000';
+        inputs[i].style.borderColor = '#ccc';
+      }
+    }
+
+    function toggleDarkMode() {
+      if (document.body.classList.contains('dark-mode')) {
+        disableDarkMode();
+      } else {
+        enableDarkMode();
+      }
+    }
+
+    darkModeToggle.addEventListener('click', toggleDarkMode);
+  </script>
+  <script>
+    const kirimButton = document.getElementById('kirim-button');
+  
+    kirimButton.addEventListener('click', function (event) {
+      const konfirmasi = confirm("Apakah Anda yakin ingin mengirim pengaduan?");
+      if (!konfirmasi) {
+        event.preventDefault();
+      }
+    });
+  </script>
+  
+</body>
+</html>
