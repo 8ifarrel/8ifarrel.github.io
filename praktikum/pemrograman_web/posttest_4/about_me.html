@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farrel Sirah</title>
+    <link rel="stylesheet" href="style_about_me.css">
+</head>
+<body>
+    <a id="dark-mode-toggle" class="dark-mode-logo"></a>
+    <nav id="navbar">
+        <div class="navbar-name">Farrel Sirah</div>
+        <div>
+            <ul class="navbar-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact-info">Contant</a></li>
+                <li><a href="index.html">PENORAK</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="profile">
+        <div class="profile-pic">
+            <img src="./assets/profile-pic.png" alt="Farrel Sirah">
+        </div>
+        <div class="profile-text">
+            <p class="profile-text-greeting">I am</p>
+            <h1 class="profile-text-name">Farrel Sirah</h1>
+            <p class="profile-text-role">Data Scientist</p>
+        </div>
+    </nav>
+    <div id="about">
+        <div class="about-row">
+            <div class="about-image">
+                <img src="./assets/about-me-pic.jpg" alt="Farrel Sirah" height="500px">
+            </div>
+            <div class="about-text">
+                <h1 class="about-text-title">About Me</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sint ratione soluta. Quo mollitia tenetur totam explicabo ullam minima. Labore accusantium non aliquid similique repudiandae quaerat nulla in, porro nemo.</p>
+                <div class="about-tab">
+                    <p class="about-tab-links active-link" onclick="openTab('skills')">Skill</p>
+                    <p class="about-tab-links" onclick="openTab('experience')">Experience</p>
+                    <p class="about-tab-links"onclick="openTab('education')">Education</p>
+                </div>
+                <div class="about-tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Analysis</span><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><span>Data Science</span><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><span>Machine Learning</span><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                </div>
+                <div class="about-tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - current</span><br>Laboratory assistant</li>
+                    </ul>
+                </div>
+                <div class="about-tab-contents" id="education">
+                    <ul>
+                        <li><span>2019 - 2020</span><br>SD Negeri 008 Samarinda</li>
+                        <li><span>2020 - 2021</span><br>SMP Negeri 1 Samarinda</li>
+                        <li><span>2021 - 2022</span><br>SMA Negeri 1 Samarinda</li>
+                        <li><span>2022 - current</span><br>Universitas Mulawarman</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" id="contact-info">
+        <div class="footer-content">
+          <div class="contact-info" id="contact-info">
+            <h3>Contant</h3>
+            <p>Email: <a href="mailto:farrelsirah@email.com">farrelsirah@gmail.com</a></p>
+            <p>Phone number: <a href="tel:+6288888888">+6288888888</a></p>
+          </div>
+          <div class="social-media">
+            <h3>Social Media</h3>
+            <ul>
+              <li><a href="https://www.instagram.com/"><img src="./assets/instagram-logo.png" width="35"></a></li>
+              <li><a id="github-logo" href="https://github.com/"><img src="./assets/light_mode/github-logo.png" width="35"></a></li>
+              <li><a href="https://www.linkedin.com/"><img src="./assets/linkedin-logo.png" width="35"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023. Muhammad Farrel Sirah. Hak cipta dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const imageContainer = document.querySelector('.image-container');
+
+        function enableDarkMode() {
+        document.body.classList.add('dark-mode');
+        }
+
+        function disableDarkMode() {
+        document.body.classList.remove('dark-mode');
+        }
+
+        function toggleDarkMode() {
+        if (document.body.classList.contains('dark-mode')) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+        }
+
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("about-tab-links");
+        var tabcontents = document.getElementsByClassName("about-tab-contents");
+        function openTab(tabname){
+            for(var i = 0; i < tablinks.length; i++){
+                tablinks[i].classList.remove("active-link");
+            }
+            for(var i = 0; i < tabcontents.length; i++){
+                tabcontents[i].classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>

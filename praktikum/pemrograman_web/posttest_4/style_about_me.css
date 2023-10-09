@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+
+/* Transition */
+
+a {
+    transition: all 500ms ease;
+}
+
+/* navigation bar */
+
+nav {
+    display: flex;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.navbar-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.navbar-name {
+    font-size: 2rem;
+}
+
+.navbar-name:hover {
+    cursor: default;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.profile-pic {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.profile-text {
+    align-self: center;
+    text-align: center;
+}
+
+.profile-text p {
+    font-weight: 500;
+}
+
+.profile-text-greeting {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.profile-text-name {
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+.profile-text-role {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+}
+
+/* About */
+
+#about {
+    padding: 160px 18.5%;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex-basis: 35%;
+}
+
+.about-image img {
+    border-radius: 15px;
+
+}
+
+.about-text {
+    flex-basis: 50%;
+
+}
+
+.about-text-title {
+    font-size: 40px;
+}
+
+.about-tab {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.about-tab-links {
+    margin-right: 50px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.about-tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: black;
+    position: absolute;   
+    left: 0;
+    bottom: -8px;
+    transition: 500ms;
+}
+
+.about-tab-links.active-link::after {
+    width: 100%;
+}
+
+.about-tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.about-tab-contents ul li span{
+    font-weight: bold;
+}
+
+.about-tab-contents {
+    display: none;
+}
+
+.about-tab-contents.active-tab {
+    display: block;
+}
+
+body.dark-mode {
+    background-color: #292929;
+    color: white;
+}
+
+.dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode a {
+    color: white;
+}
+
+.dark-mode .about-tab-links::after {
+    background-color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    color: black;
+    padding: 45px;
+    bottom: 0;
+  }
+  
+.contact-info {
+    padding-left: 200px;
+    padding-top: 30px;
+    color: black;
+}
+
+.social-media {
+    padding-top: 25px;
+    padding-right: 200px;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+}
+
+.social-media ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.social-media ul li a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    background-color: #f6f6f6;
+    padding-bottom: 30px;
+}
+
+.dark-mode {
+    background-color: #292929;
+    color: #fff;
+    color: rgb(113, 113, 113)
+}
+
+.dark-mode .form-background {
+    background-color: #161616;
+    color: #fff;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode.image-container {
+    background-image: none;
+}
+
+.dark-mode .footer-content {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.dark-mode .contact-info {
+    color: white;
+}
+
+.dark-mode .social-media ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.dark-mode .copyright {
+    color:white;
+    background-color: #1c1c1c;
+}
+
+
+.dark-mode-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-image: url('./assets/light_mode/dark-mode-icon.png');
+    border-radius: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+}
+
+.dark-mode .dark-mode-logo {
+    content: url('./assets/dark_mode/light-mode-icon.png');
+    border-radius: 10%;
+}
+
+.dark-mode #github-logo img {
+    content: url('./assets/dark_mode/github-logo.png');
+  }
