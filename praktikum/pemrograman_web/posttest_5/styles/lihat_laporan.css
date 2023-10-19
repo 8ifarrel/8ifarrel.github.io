@@ -1,0 +1,46 @@
+#laporan-deskripsi {
+  border: 1.5px solid #ccc;
+  height: 300px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+#laporan-judul,
+#laporan-tanggal,
+#laporan-instansi,
+#laporan-email {
+  border: 1.5px solid #ccc;
+  height: 40px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+#laporan-lokasi {
+  border: 1.5px solid #ccc;
+  height: 80px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.arrow-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.fa-2xl {
+  font-size: 3.5em;
+}
+
+.edit-button-container {
+  background-color: #d0021b;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.edit-button-container a {
+  color: #fff;
+  text-decoration: none;
+}
