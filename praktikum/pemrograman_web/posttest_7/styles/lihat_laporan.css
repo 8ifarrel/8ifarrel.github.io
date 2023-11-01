@@ -1,0 +1,58 @@
+#laporan-deskripsi {
+  border: 1.5px solid #ccc;
+  height: 300px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+#laporan-judul,
+#laporan-tanggal,
+#laporan-instansi,
+#laporan-email {
+  border: 1.5px solid #ccc;
+  height: 40px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+#laporan-lokasi {
+  border: 1.5px solid #ccc;
+  height: 80px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+.arrow-container {
+  padding-top: 50%;
+}
+
+.fa-2xl {
+  font-size: 3.5em;
+}
+
+.edit-btn,
+.delete-btn {
+  background-color: #d0021b;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.edit-btn a,
+.delete-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Dark mode */
+
+.dark-mode #laporan-deskripsi,
+.dark-mode #laporan-judul,
+.dark-mode #laporan-tanggal,
+.dark-mode #laporan-lokasi,
+.dark-mode #laporan-instansi,
+.dark-mode #laporan-email {
+  border-color: #505050;
+  color: white;
+}
